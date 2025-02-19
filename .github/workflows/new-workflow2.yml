@@ -1,0 +1,20 @@
+name: New Workflow 2
+
+on:
+  # feature/new-github-actionブランチにpushされた時に実行
+  push:
+    branches:
+      - feature/new-github-action
+  # 手動実行を許可
+  workflow_dispatch:
+
+jobs:
+  hello-world2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Print Hello New World 2
+        run: echo "Hello, New World 2!"
+
