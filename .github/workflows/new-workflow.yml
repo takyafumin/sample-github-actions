@@ -1,10 +1,10 @@
 name: New Workflow
 
 on:
-  # mainブランチにpushされた時に実行
+  # feature/new-github-actionブランチにpushされた時に実行
   push:
     branches:
-      - main
+      - feature/new-github-action
   # 手動実行を許可
   workflow_dispatch:
 
@@ -17,3 +17,4 @@ jobs:
 
       - name: Print Hello New World
         run: echo "Hello, New World!"
+
