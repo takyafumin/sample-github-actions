@@ -1,0 +1,19 @@
+name: Hello World
+
+on:
+  # mainブランチにpushされた時に実行
+  push:
+    branches:
+      - main
+  # 手動実行を許可
+  workflow_dispatch:
+
+jobs:
+  hello-world:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Print Hello World
+        run: echo "Hello, World!"
